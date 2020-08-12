@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+
+    <title>Reel Loud</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css"> <!-- style1.css references style.css. Different name used to prevent caching -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body onresize="onResize()" class="h-100">
+    <div id="HomeContainer" class="h-100">
+      <div id="navbar" class="w-100 margin-0 padding-0 row homenav">
+        <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+        <div id="homenavelem" class="col-md-2 col-sm-12 navlinkContainerActive homenavelem" onclick="location.href='index.html'">
+          <div class="centerVertContainer"><a class="navlink">Home</a></div>
+        </div>
+        <div id="aboutnavelem" class="col-md-2 col-sm-12 navlinkContainerActive aboutnavelem dropdown show" onclick="$('#dropdown-about').dropdown()">
+          <div class="centerVertContainer">
+            <a id="dropdown-about" class="navlink dropdown-toggle" data-toggle="dropdown">About</a>
+            <div id="dropdown-menu" class="w-100 dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="about.html">REEL LOUD</a>
+              <a class="dropdown-item" href="aboutCommittee.html">COMMITTEE</a>
+              <a class="dropdown-item" href="theme.html">2020 THEME</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-block navlinkContainer">
+          <center class="h-100"><img src="logo.png" class="w-50"></center>
+        </div>
+        <div id="rulesnavelem" class="col-md-2 col-sm-12 navlinkContainerActive rulesnavelem" onclick="location.href='rules.html'">
+          <div class="centerVertContainer"><a class="navlink">Rules</a></div>
+        </div>
+        <div id="contactnavelem" class="col-md-2 col-sm-12 navlinkContainerActive contactnavelem" onclick="location.href='contact.html'">
+          <div class="centerVertContainer"><a class="navlink">Contact</a></div>
+        </div>
+
+        <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+        <div class="d-md-none">
+          <center><img src="logo.png" class="w-25"></center>
+        </div>
+    </div>
+
+      <div class="h-100 override">
+        <div class="row margin-0 h-100">
+          <div class="row w-100 margin-0 gradient" style="height: 125px"> <!-- Add gradient to the end of class to readd the gradient for future edit -->
+            <div class="col-12 row h-50 margin-0">
+              <div class="col-md-2"></div>
+              <div class="col-md-8 row margin-0 padding-0">
+                <div class="w-20"><center id="weeks-top" class="time"></center></div>
+                <div class="w-20"><center id="days-top" class="time"></center></div>
+                <div class="w-20"><center id="hours-top" class="time"></center></div>
+                <div class="w-20"><center id="minutes-top" class="time"></center></div>
+                <div class="w-20"><center id="seconds-top" class="time"></center></div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+            <div class="col-12 row h-50 margin-0">
+              <div class="col-md-2"></div>
+              <div class="col-md-8 row margin-0 padding-0">
+                <div class="w-20" id="weeks-bottom"><center class="timeBottom">Weeks</center></div>
+                <div class="w-20" id="days-bottom"><center class="timeBottom">Days</center></div>
+                <div class="w-20" id="hours-bottom"><center class="timeBottom">Hours</center></div>
+                <div class="w-20" id="minutes-bottom"><center class="timeBottom"><center>Minutes</center></div>
+                <div class="w-20" id="seconds-bottom"><center class="timeBottom"><center>Seconds</center></div>
+              </div>
+              <div class="col-md-1">
+              </div>
+              <hr class="row w-100 margin-0 line" />
+            </div>
+          </div>
+          <div class="row w-100 margin-0 poster" style="height: 80%; justify-content: center;">
+            <div class="col-md-4 col-sm-6 h-100" style="margin-top: 3vh;">
+              <div id="page1Left" class="centerVert max-h-100" style="padding: 10px">
+                <div style="display:flex;justify-content:center;align-items:center; margin-bottom: 5vh;">
+                  <button id="ticket" onclick="window.open('https://events.ucsb.edu/event/28th-annual-reel-loud-film-and-arts-festival-2/','_blank')" class="w-100  ticket">
+                    BUY TICKETS HERE
+                  </button>
+                </div>
+                <div class="h-50">
+                  <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel" data-interval="false" style="background-color: #6599FF; padding: 2vh;">
+                    <div class="carousel-inner h-100">
+                      <div class="carousel-item active h-100">
+                        <iframe width=100% height=100% src="https://www.youtube.com/embed/JJha_2TAcws" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev h-25" href="#carouselExampleControls" role="button" data-slide="prev" style="top: 37.5%">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next h-25" href="#carouselExampleControls" role="button" data-slide="next" style="top: 37.5%">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+                <div style="padding: 12px">
+                  <div class="socialMediaLinks w-100" style="margin-top: 5vh;">
+                    <div style="display:flex;justify-content:center;align-items:center;">
+                      <div class="row w-100" style="justify-content: center;">
+                        <div class="col-5">
+                          <center>
+                            <a target="_blank" href="https://www.facebook.com/ReelLoud/" class="fa fa-facebook"></a>
+                          </center>
+                        </div>
+                        <div class="col-5">
+                          <center>
+                            <a target="_blank" href="https://www.instagram.com/reelloudfilmfestival/" class="fa fa-instagram"></a>
+                          </center>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script>
+
+  var page = "home";
+
+  function onResize() {
+    if (window.innerWidth >= 768) {
+      $("#page1Left").addClass("centerVert");
+      $("#poster").addClass("centerVert");
+    } else {
+      $("#page1Left").removeClass("centerVert");
+      $("#poster").removeClass("centerVert");
+    }
+    $("#page1Left").height($("#poster").height());
+  }
+  onResize();
+
+  var page = "home";
+  var pages = ["home", "about", "rules", "contact"];
+
+  var defaultClass = page + "nav";
+  pages.forEach(function (currPage) {
+    var newClass = currPage + "nav";
+
+    $("#" + currPage + "navelem").mouseenter(function() {
+      var toChange = [$("#navbar"), $("#dropdown-menu")]
+      for (var i = 0; i < toChange.length; i++) {
+         toChange[i].removeClass(defaultClass);
+         toChange[i].addClass(currPage + "nav");
+      }
+     });
+
+     $("#" + currPage + "navelem").mouseleave(function() {
+        var toChange = [$("#navbar"), $("#dropdown-menu")]
+        for (var i = 0; i < toChange.length; i++) {
+          toChange[i].removeClass(currPage + "nav");
+          toChange[i].addClass(defaultClass);
+        }
+     });
+  });
+
+  var ticket = $("#ticket");
+  var ticketClasses = ["yellowBG", "redBG", "greenBG", "blueBG"];
+
+  var currentBG = Math.floor(Math.random() * ticketClasses.length);
+  ticket.addClass(ticketClasses[currentBG]);
+  ticket.mouseout(function() {
+    for (var i = 0; i < ticketClasses.length; i+=1) {
+      console.log(ticketClasses[i]);
+      ticket.removeClass(ticketClasses[i]);
+    }
+    currentBG += 1;
+    ticket.addClass(ticketClasses[currentBG%ticketClasses.length]);
+
+
+    });
+
+  // function escape() {
+  //   $("#HomeContainer").fadeIn(600);
+  //   onResize();
+  //   $("#escapeButtonContainer").fadeOut(600);
+  //   document.cookie = "escaped=true;";
+  // }
+
+  function cookieExists(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  if (!cookieExists("escaped")) {
+    $("#escapeButtonContainer").show();
+  } else {
+    $("#HomeContainer").show();
+    onResize();
+  }
+
+
+
+  var seconds = 1000;
+  var minutes = seconds * 60;
+  var hours = minutes * 60;
+  var days = hours * 24;
+  var weeks = days * 7;
+  var amounts = [weeks, days, hours, minutes, seconds];
+  var texts = ['weeks', 'days', 'hours', 'minutes', 'seconds'];
+
+  var start = new Date('May 22, 2020 17:00:00');
+
+
+  function twoDigits(a) {
+    b = "" + a;
+    while (b.length < 2) {
+      b = "0" + b;
+    }
+    return b;
+  }
+
+  function update() {
+    var diff = start - (new Date());
+
+    var counts = [0, 0, 0, 0, 0];
+
+    for (var i = 0; i < counts.length; i++) {
+      while (diff >= amounts[i]) {
+        counts[i] += 1;
+        diff -= amounts[i];
+      }
+    }
+
+    $('#weeks-top').html(twoDigits(counts[0]));
+    $('#days-top').html(twoDigits(counts[1]));
+    $('#hours-top').html(twoDigits(counts[2]));
+    $('#minutes-top').html(twoDigits(counts[3]));
+    $('#seconds-top').html(twoDigits(counts[4]));
+  }
+  update();
+  setInterval(update, 500);
+
+
+</script>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>About REEL LOUD</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+
+</head>
+<body onresize="onResize()" class="h-100 about">
+  <div class="margin-0 padding-0 navbar">
+    <div id="navbar" class="w-100 margin-0 padding-0 row aboutnav">
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div id="homenavelem" class="col-md-2 col-sm-12 navlinkContainerActive homenavelem" onclick="location.href='index.html'">
+        <div class="centerVertContainer"><a class="navlink">Home</a></div>
+      </div>
+      <div id="aboutnavelem" class="col-md-2 col-sm-12 navlinkContainerActive aboutnavelem dropdown show" onclick="$('#dropdown-about').dropdown()">
+          <div class="centerVertContainer">
+            <a id="dropdown-about" class="navlink dropdown-toggle" data-toggle="dropdown">About</a>
+            <div id="dropdown-menu" class="w-100 dropdown-menu aboutnav" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="about.html">REEL LOUD</a>
+              <a class="dropdown-item" href="aboutCommittee.html">COMMITTEE</a>
+              <a class="dropdown-item" href="theme.html">2020 THEME</a>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-2 d-none d-md-block navlinkContainer">
+        <center class="h-100"><img src="logo.png" class="w-50"></center>
+      </div>
+      <div id="rulesnavelem" class="col-md-2 col-sm-12 navlinkContainerActive rulesnavelem" onclick="location.href='rules.html'">
+        <div class="centerVertContainer"><a class="navlink">Rules</a></div>
+      </div>
+      <div id="contactnavelem" class="col-md-2 col-sm-12 navlinkContainerActive contactnavelem" onclick="location.href='contact.html'">
+        <div class="centerVertContainer"><a class="navlink">Contact</a></div>
+      </div>
+
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div class="d-md-none">
+        <center><img src="logo.png" class="w-25"></center>
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="w-100">
+    <center><img id="whoweare" src="reinventimages/whoweare.png" width="30%" style="margin-top: 2vh;"></center>
+
+    <div class="aboutTextContainer">
+     <p>&nbsp;</p>
+      <p>The REEL LOUD Film and Arts Festival is an annual student-organized event at UC Santa Barbara that celebrates student films, art, music, dance, performance, and more. A tradition nearly thirty years old, we are known for our unique focus on student-made, silent films with a twist - each film premieres with a band playing musical accompaniment live on stage.</p>
+      <p>&nbsp;</p>
+
+      <p>In addition to our famed film screening, we host a courtyard reception that features original student art, live performances from local bands and DJs, custom photo booths, interactive art displays, and a silent auction - the proceeds of which are donated to a local Santa Barbara charity. REEL LOUD aims to exhibit art in all shapes, sizes, and media, and unites the people of UCSB, Isla Vista, and Santa Barbara for a night of celebrating the immense creativity that exists within our local community.</p>
+      <p>&nbsp;</p>
+
+      <p>Our committee for the 2020 Festival is made of 19 diverse students who have been working since September to organize this massive event and make it bigger than ever before. The perspectives that have led this festival range from art, to computer science. We aren’t just for art students - we are an opportunity for every individual in our Santa Barbara community to jubilate in each other’s self expression. </p>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+  var page = "about";
+  var pages = ["home", "about", "rules", "contact"];
+
+  var defaultClass = page + "nav";
+  pages.forEach(function (currPage) {
+    var newClass = currPage + "nav";
+    console.log(newClass);
+
+    $("#" + currPage + "navelem").mouseenter(function() {
+         $("#navbar").removeClass(defaultClass);
+         $("#navbar").addClass(currPage + "nav");
+     });
+
+     $("#" + currPage + "navelem").mouseleave(function() {
+         $("#navbar").removeClass(currPage + "nav");
+         $("#navbar").addClass(defaultClass);
+     });
+  });
+
+  function onResize() {
+      $("#content").height(window.innerHeight - $("#nav").height());
+  }
+  onResize();
+</script>
+
+</html>

@@ -1,0 +1,450 @@
+html{
+    margin:0;
+}
+
+body {
+  background-color: #FF9600;
+  margin: 0;
+}
+
+.h-100.override{
+  background-color: #FF9600;
+}
+
+.row.gradient {
+  background-image: linear-gradient(#6599FF, 40%, #FF9900);
+}
+
+.row.poster {
+  background: url(../reinventimages/poster.png) left repeat-y, url(../reinventimages/poster.png) right repeat-y;
+  background-size: 61vh;
+  margin-top: 0;
+}
+
+@font-face {
+    font-family: 'engebrechtreexpanded';
+    src: url('engebrechtre ex.ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuCondensedFont';
+    src: url('UbuntuCondensed-Regular.ttf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.comingSoon {
+    position: absolute;
+    color: #7B1600;
+    font-family: 'engebrechtreexpanded';
+    font-size: 50px;
+}
+
+.aboutTextContainer {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.aboutTextContainer > p, .aboutText {
+    font-family: 'UbuntuCondensedFont';
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: white !important;
+    font-weight: bold;
+}
+
+.aboutTextContainer > ul > li,  .aboutTextContainer > ul > ul > li,  .aboutTextContainer > ul > ul > ul > li {
+    font-family: 'UbuntuCondensedFont';
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.relative {
+    position: relative;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+#logo{
+    margin-left: 1.5%;
+    margin-top: 1.5%;
+}
+#left{
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: transform 5s;
+    transform-origin: left;
+}
+#right{
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    transition: transform 5s;
+    transform-origin: right;
+
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+}
+
+.top {
+    position: absolute;
+    top: 0px;
+}
+
+.margin-0 {
+    margin: 0px !important;
+}
+
+.padding-0 {
+    padding: 0px !important;
+}
+
+.root {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.homenav {
+    background: #6599FF !important;
+    transition: 0.8s;
+}
+
+.dropdown-menu {
+    transform: translate3d(0px, 0px, 0px) !important;
+    top: 100% !important;
+    left: 0px !important;
+}
+
+.rulesnav {
+    background: #B100FE !important;
+    transition: 0.8s;
+}
+
+.aboutnav {
+    background: #228B22 !important;
+    transition: 0.8s;
+}
+
+.aboutnav > a:hover {
+    background-color: #90EE90 !important;
+}
+
+.contactnav {
+    background: #FF3DA0 !important;
+    transition: 0.8s;
+}
+
+.homenavelem:hover {
+    background-color: #87CEEB;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.rulesnavelem:hover {
+    background-color: #BA55D3;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.rulesnavelem:hover ~ .row.gradient{
+    background-image: linear-gradient(#BA55D3, 40%, #FF9900);
+}
+
+.aboutnavelem:hover {
+    background-color: #41B641;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.contactnavelem:hover {
+    background-color: #FFC0CB;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.dropdown-item.override:hover {
+    background-color: #41B641;
+}
+
+.navlinkContainer, .navlinkContainerActive {
+    list-style: none;
+    float:left;
+    position: fixed;
+    bottom:0;
+    margin:0 auto;
+    padding:0;
+    width: 100%;
+}
+
+.navlinkContainerActive {
+    min-height: 45px !important;
+}
+
+.navlinkContainerActive a {
+    width:100%;
+    background-color: transparent;
+    color: white !important;
+    border:none;
+    text-decoration: none;
+    font-family: 'engebrechtreexpanded';
+    font-size: 30px;
+    text-align: center;
+}
+
+.input {
+    width: 328px;
+    font-family: ingra, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.label {
+    color: white;
+    text-align: left;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: 'Ubuntu Condensed';
+}
+
+.contact {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.contactText {
+    margin-left: 30%;
+    margin-top: 40px;
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    line-height: 18px;
+    font-family: ingra, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.textarea {
+    width: 328px;
+    height: 68px;
+    color: black;
+    font-family: ingra, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    padding: 6px;
+    min-height: 0px;
+}
+
+.submit {
+    display: inline;
+    margin-right: 15px;
+}
+
+.centerVert {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.centerVertContainer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    height: 100%;
+}
+
+.socialMediaLinks .fa {
+    padding: 20px;
+    font-size: 35px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+
+  /* Add a hover effect if you want */
+  .fa-facebook:hover {
+    opacity: 0.7;
+  }
+  .fa-instagram:hover{
+      opacity: 0.7;
+  }
+  /* Facebook icon*/
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Instagram */
+  .fa-instagram {
+    background: #fb3958;
+    color: white;
+}
+
+
+#rulesTitle {
+    font-size: 3rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 7px;
+    color:white;
+}
+
+.max-w-100 {
+    max-width: 100% !important;
+}
+
+.max-h-100 {
+    max-height: 100% !important;
+}
+
+.min-w-100 {
+    min-width: 100% !important;
+}
+
+.min-h-100 {
+    min-height: 100% !important;
+}
+
+.spacebg {
+    background: url('space2.jpg');
+    background-size: cover;
+    margin: 0px;
+}
+
+.escape{
+    font-size: 3rem;
+    color: white;
+    font-family: arail;
+    text-decoration: none;
+    padding: 22px;
+    border: 5px solid white;
+    border-radius: 30px;
+
+}
+.escape:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.escapeButtonContainer {
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+}
+
+.time {
+    color: white;
+    font-size: 3rem;
+}
+
+.timeBottom {
+    color: white;
+    font-size: 1rem;
+}
+
+.link {
+    color: white;
+    text-decoration: underline;
+    font-family: 'engebrechtreexpanded';
+}
+
+.link:hover {
+    color: pink;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+
+.ticket {
+    font-size: 1.9rem;
+    color: white;
+    font-family: engebrechtreexpanded;
+    text-decoration: none;
+    padding:10px;
+    border: 5px solid white;
+    background-color:black;
+    border-radius: 30px;
+    text-align: center;
+
+}
+
+#ticket:hover {
+    cursor: pointer;
+    transition: .8s;
+}
+
+.yellowBG:hover {
+    background-color: #FFC528;
+}
+
+.redBG:hover {
+    background: rgba(128,0,0,1);
+}
+
+.greenBG:hover {
+    background: rgba(0,128,0,1) !important;
+}
+
+.blueBG:hover {
+    background: rgba(0,0,128,1);
+}
+
+.sponserText {
+   font-family: 'UbuntuCondensedFont';
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white !important;
+    font-weight: bold;
+}
+
+.line {
+    height: 3px;
+    border-color: white;
+}
+
+.committeeImage {
+    height: 400px;
+    padding: 20px;
+}
+
+.titleText {
+    color: white;
+    font-size: 24px;
+    font-family: 'engebrechtreexpanded';
+}

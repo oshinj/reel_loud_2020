@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+
+</head>
+<body class="h-100 w-100 contact" onResize="onResize()" style="margin: 0;">
+  <div class="margin-0 padding-0 navbar">
+    <div id="navbar" class="w-100 margin-0 padding-0 row contactnav">
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div id="homenavelem" class="col-md-2 col-sm-12 navlinkContainerActive homenavelem" onclick="location.href='index.html'">
+        <div class="centerVertContainer"><a class="navlink">Home</a></div>
+      </div>
+      <div id="aboutnavelem" class="col-md-2 col-sm-12 navlinkContainerActive aboutnavelem dropdown show" onclick="$('#dropdown-about').dropdown()">
+          <div class="centerVertContainer">
+            <a id="dropdown-about" class="navlink dropdown-toggle" data-toggle="dropdown">About</a>
+            <div id="dropdown-menu" class="w-100 dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="about.html">REEL LOUD</a>
+              <a class="dropdown-item" href="aboutCommittee.html">COMMITTEE</a>
+              <a class="dropdown-item" href="theme.html">2020 THEME</a>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-2 d-none d-md-block navlinkContainer">
+        <center class="h-100"><img src="logo.png" class="w-50"></center>
+      </div>
+      <div id="rulesnavelem" class="col-md-2 col-sm-12 navlinkContainerActive rulesnavelem" onclick="location.href='rules.html'">
+        <div class="centerVertContainer"><a class="navlink">Rules</a></div>
+      </div>
+      <div id="contactnavelem" class="col-md-2 col-sm-12 navlinkContainerActive contactnavelem" onclick="location.href='contact.html'">
+        <div class="centerVertContainer"><a class="navlink">Contact</a></div>
+      </div>
+
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div class="d-md-none">
+        <center><img src="logo.png" class="w-25"></center>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="contact">
+    <p class="contactText">Have any questions? Feel free to email us using this form!</p>
+    <p>&nbsp;</p>
+    <div>
+      <form id="emailForm">
+
+         <div data-required="true">
+            <label class="label">Name:</label><br/>
+            <input class="input" type="text" spellcheck="false" name="custom_U1182" tabindex="1" placeholder="Enter Name">
+         </div>
+         <br/>
+
+         <div data-required="true">
+            <label class="label">Email:</label> <br/>
+            <input class="input" type="email" spellcheck="false" id="widgetu1189_input" name="Email" tabindex="2" placeholder="Enter Email"/>
+         </div>
+         <br/>
+
+         <div id="widgetu1178" data-required="false">
+          <label class="label">Message:</label><br/>
+          <textarea class="textarea" id="widgetu1178_input" name="custom_U1178" tabindex="3" placeholder="Enter Your Message"></textarea>
+        </div>
+        <br/>
+
+         <div data-required="true">
+            <label class="label">Cell Phone:</label><br/>
+            <input class="input" type="tel" spellcheck="false" id="widgetu1228_input" name="custom_U1228" tabindex="4" placeholder="Enter Phone Number">
+         </div>
+         <br/>
+
+         <button class="submit btn btn-light" type="submit" value="Submit" tabindex="5">
+          Submit
+         </button>
+
+          <span id="submitting" class="label" style="display: none;">Submitting Form...</span>
+          <span id="internalError" class="label" style="display: none;">Server error. Please try again later</span>
+          <span id="formReceived" class="label" style="display: none;">Form received.</span>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  var page = "contact";
+  var pages = ["home", "about", "rules", "contact"];
+
+  var defaultClass = page + "nav";
+  pages.forEach(function (currPage) {
+    var newClass = currPage + "nav";
+
+    $("#" + currPage + "navelem").mouseenter(function() {
+      var toChange = [$("#navbar"), $("#dropdown-menu")]
+      for (var i = 0; i < toChange.length; i++) {
+        toChange[i].removeClass(defaultClass);
+        toChange[i].addClass(currPage + "nav");
+      }
+    });
+
+     $("#" + currPage + "navelem").mouseleave(function() {
+        var toChange = [$("#navbar"), $("#dropdown-menu")]
+        for (var i = 0; i < toChange.length; i++) {
+          toChange[i].removeClass(currPage + "nav");
+          toChange[i].addClass(defaultClass);
+        }
+     });
+  });
+
+  function sendEmail(e) {
+    var form = $("#emailForm");
+    var url = "http://reel-loud.com/scripts/form-u1177.php";
+
+    $("#submitting").show();
+    $("#internalError").hide();
+    $("#formReceived").hide();
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: form.serialize(),
+           success: function(data) {
+            console.log(data);
+              var success = false;
+              try {
+                success = JSON.parse(data).FormResponse.success;
+              } catch (ignored) { }
+
+              $("#submitting").hide();
+
+              if (success) {
+                $("#internalError").hide();
+                $("#formReceived").show();
+              } else {
+                $("#internalError").show();
+                $("#formReceived").hide();
+              }
+           }
+         });
+
+    return false;
+}
+
+
+</script>
+
+</html>

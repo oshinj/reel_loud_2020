@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>About Committee</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+
+</head>
+<body onresize="onResize()" class="h-100 about">
+  <div class="margin-0 padding-0 navbar">
+    <div id="navbar" class="w-100 margin-0 padding-0 row aboutnav">
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div id="homenavelem" class="col-md-2 col-sm-12 navlinkContainerActive homenavelem" onclick="location.href='index.html'">
+        <div class="centerVertContainer"><a class="navlink">Home</a></div>
+      </div>
+      <div id="aboutnavelem" class="col-md-2 col-sm-12 navlinkContainerActive aboutnavelem dropdown show" onclick="$('#dropdown-about').dropdown()">
+        <div class="centerVertContainer">
+          <a id="dropdown-about" class="navlink dropdown-toggle" data-toggle="dropdown">About</a>
+          <div id="dropdown-menu" class="w-100 dropdown-menu aboutnav" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="about.html">REEL LOUD</a>
+            <a class="dropdown-item" href="aboutCommittee.html">COMMITTEE</a>
+            <a class="dropdown-item" href="theme.html">2020 THEME</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 d-none d-md-block navlinkContainer">
+        <center class="h-100"><img src="logo.png" class="w-50"></center>
+      </div>
+      <div id="rulesnavelem" class="col-md-2 col-sm-12 navlinkContainerActive rulesnavelem" onclick="location.href='rules.html'">
+        <div class="centerVertContainer"><a class="navlink">Rules</a></div>
+      </div>
+      <div id="contactnavelem" class="col-md-2 col-sm-12 navlinkContainerActive contactnavelem" onclick="location.href='contact.html'">
+        <div class="centerVertContainer"><a class="navlink">Contact</a></div>
+      </div>
+
+      <div class="col-md-1 hidden-sm-down navlinkContainer"></div>
+
+      <div class="d-md-none">
+        <center><img src="logo.png" class="w-25"></center>
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="container" class="w-100">
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/MPHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Stephanie Marin - Producer </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/JOHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Jeffery Peepgrass - Director </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/KDHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Chen Li - Assistant Producer </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/KOHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Kyle Kam - Assistant Director </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/VMHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Francisco Cardoso - Courtyard Coordinator </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/SMHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Katherine Jiang-Li - Performance Coordinator </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/DBHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Emily Schwab - Outreach Event Coordinator </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/CLHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Cameron Leingang - Volunteer Coordinator </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/MQHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Milla Dzakovic - Art Coordinator </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/ALHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Vince Sackey - Fundraising Coordinator </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/SMHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Claire Chung - Practical Artist </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/GVHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Jordyn Dunn - Practical Artist </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/SOHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Chris Perez - Social Media </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/SPHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Hollie Collins - Social Media </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/TLHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Javier Barajas - Graphic Designer </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/YEHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Celine Khuu - Graphic Designer </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/PHHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Jake Potts - Videographer </p>
+        </center>
+      </div>
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/YXYHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Evelyn Chen - Videographer </p>
+        </center>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-6">
+        <center>
+          <img src="headshots/YXYHeadshot.jpg" class="committeeImage">
+          <p class="titleText"> Oshin Joshi - Web Designer/Music Coordinator </p>
+        </center>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<script type="text/javascript">
+
+  var page = "about";
+  var pages = ["home", "about", "rules", "contact"];
+
+  var defaultClass = page + "nav";
+  pages.forEach(function (currPage) {
+    var newClass = currPage + "nav";
+    console.log(newClass);
+
+    $("#" + currPage + "navelem").mouseenter(function() {
+          var toChange = [$("#navbar"), $("#dropdown-menu")]
+          for (var i = 0; i < toChange.length; i++) {
+            toChange[i].removeClass(defaultClass);
+            toChange[i].addClass(currPage + "nav");
+          }
+
+     });
+
+     $("#" + currPage + "navelem").mouseleave(function() {
+        var toChange = [$("#navbar"), $("#dropdown-menu")]
+        for (var i = 0; i < toChange.length; i++) {
+           toChange[i].removeClass(currPage + "nav");
+           toChange[i].addClass(defaultClass);
+        }
+     });
+  });
+
+  function onResize() {
+      $("#content").height(window.innerHeight - $("#nav").height());
+  }
+  onResize();
+</script>
+
+</html>
